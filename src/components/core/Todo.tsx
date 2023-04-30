@@ -6,17 +6,8 @@ import TodoList from './TodoList';
 // Import firebase configuration from firebase.ts file
 import firebaseApp from '../../firebase';
 
-export type Todo = {
-  id: string;
-  title: string;
-  done: boolean;
-};
-
 const Todo = () => {
-  // const db = getDatabase();
-  //   const todoRef = firebaseApp.database().ref('Todo');
-  let db = getDatabase(firebaseApp);
-  console.log('db', db);
+  const db = getDatabase(firebaseApp);
   const [title, setTitle] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,15 +21,12 @@ const Todo = () => {
       done: false,
     };
     push(todoRef, todo);
-
-    db = getDatabase(firebaseApp);
-    console.log('db', db);
   };
 
   return (
     <div>
       <header>
-        <h1>To Do List</h1>
+        <h1>Create Todo</h1>
       </header>
 
       <Form>

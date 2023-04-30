@@ -3,15 +3,14 @@ import { getDatabase, ref, onValue, update, remove } from 'firebase/database';
 import { FormCheck } from 'react-bootstrap';
 
 import firebaseApp from '../../firebase';
-
 import { Todo } from '../../components/types/todo';
 
 const TodoList = () => {
-  const db = getDatabase(firebaseApp);
+  const database = getDatabase(firebaseApp);
   const [todoList, setTodoList] = useState<Todo[]>([]);
 
   useEffect(() => {
-    const todoRef = ref(db, '/todos');
+    const todoRef = ref(database, '/todos');
 
     onValue(todoRef, (snapshot) => {
       const todos = snapshot.val();
@@ -23,22 +22,17 @@ const TodoList = () => {
 
       setTodoList(newTodoList);
     });
-  }, [db]);
+  }, [database]);
 
   const changeTodoCompletion = (todo: Todo) => {
-    const todoRef = ref(db, '/todos/' + todo.id);
+    const todoRef = ref(database, '/todos/' + todo.id);
     update(todoRef, { done: !todo.done });
   };
 
   const deleteCompletedItems = () => {
-    const recordsToDelete = todoList.filter((todo) => {
-      return todo.done;
-    });
-
-    console.log('recordsToDelete', recordsToDelete);
     todoList.map((todo) => {
       if (todo.done) {
-        const todoRef = ref(db, '/todos/' + todo.id);
+        const todoRef = ref(database, '/todos/' + todo.id);
         remove(todoRef);
       }
     });

@@ -2,7 +2,10 @@
 // import { Link } from 'react-router-dom';
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from '@emotion/react';
+import { Hmac } from 'crypto';
 import { DOMAttributes } from 'react';
+import Tabs from '../utility/Tabs';
+import Tab from '../utility/Tab';
 
 declare namespace React {
   interface HTMLAttributes<T> extends DOMAttributes<T> {
@@ -11,50 +14,69 @@ declare namespace React {
 }
 const HOME_ITEMS = [
   {
-    title: 'Popular Movie',
+    title: 'Home',
+    description: 'test1',
   },
   {
-    title: 'Query',
+    title: 'To Do List',
+    description: 'test',
   },
   {
-    title: 'Load',
+    title: 'Recipes',
+    description: 'test2',
   },
 ];
 
 const AppHome = () => {
   return (
-    // <div> {/* This is where I get the error message */}
+    <Tabs>
+      {HOME_ITEMS?.map((card) => (
+        <Tab title={card.title}>{card.description}</Tab>
+      ))}
+    </Tabs>
 
-    <div
-      className="slds-m-top_small"
-      css={css`
-        max-width: calc(33em * 3);
-        margin-left: auto;
-        margin-right: auto;
-      `}
-    >
-      <div
-        css={css`ç
-            display: grid;
-            gap: 1em;
-            grid-template-columns: repeat(auto-fit, minmax(5em, 30em));
-            justify-content: center;
-          `}
-      >
-        {HOME_ITEMS?.map((card) => (
-          <div
-            key={card.title}
-            className="slds-box slds-box_x-small"
-            css={css`
-              background-color: #235789;
-            `}
-          >
-            <p>{card.title}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+    // <Tabs>
+    //   <Tab title="Lemon" found={true}>
+    //     Lemon is yellow
+    //   </Tab>
+    //   <Tab title="Strawberry">Strawberry is red</Tab>
+    //   <Tab title="Pear">Pear is green</Tab>
+    // </Tabs>
   );
+
+  //   return (
+  //     // <div> {/* This is where I get the error message */}
+
+  //     <div
+  //       className="slds-m-top_small"
+  //       css={css`
+  //         max-width: calc(33em * 3);
+  //         margin-left: auto;
+  //         margin-right: auto;
+  //       `}
+  //     >
+  //       <div
+  //         css={css`ç
+  //             display: grid;
+  //             gap: 1em;
+  //             grid-template-columns: repeat(auto-fit, minmax(5em, 30em));
+  //             justify-content: center;
+  //           `}
+  //       >
+  //         {HOME_ITEMS?.map((card) => (
+  //           <div
+  //             key={card.title}
+  //             className="slds-box slds-box_x-small"
+  //             css={css`
+  //               background-color: #235789;
+  //             `}
+  //           >
+  //             <p>{card.title}</p>
+  //           </div>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   );
 
   //   const titleStyle = css({
   //     boxSizing: 'border-box',

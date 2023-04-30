@@ -5,8 +5,9 @@ import { css } from '@emotion/react';
 
 const App = () => {
   return (
-    // <AppHome />
-    <Todo />
+    <div>
+      <AppHome />
+    </div>
     // <div>
     //   <div
     //     css={css({
