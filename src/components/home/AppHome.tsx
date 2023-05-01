@@ -15,15 +15,15 @@ declare namespace React {
 const HOME_ITEMS = [
   {
     title: 'Home',
-    description: 'test1',
+    description: 'Home',
   },
   {
     title: 'To Do List',
-    description: 'test',
+    description: 'To Do List',
   },
   {
     title: 'Recipes',
-    description: 'test2',
+    description: 'Recipes',
   },
 ];
 
@@ -34,49 +34,42 @@ const AppHome = () => {
         <Tab title={card.title}>{card.description}</Tab>
       ))}
     </Tabs>
-
-    // <Tabs>
-    //   <Tab title="Lemon" found={true}>
-    //     Lemon is yellow
-    //   </Tab>
-    //   <Tab title="Strawberry">Strawberry is red</Tab>
-    //   <Tab title="Pear">Pear is green</Tab>
-    // </Tabs>
   );
 
-  //   return (
-  //     // <div> {/* This is where I get the error message */}
+  // return (
+  //   // <div> {/* This is where I get the error message */}
 
+  //   <div
+  //     className="slds-m-top_small"
+  //     css={css`
+  //       max-width: calc(33em * 3);
+  //       margin-left: auto;
+  //       margin-right: auto;
+  //     `}
+  //   >
   //     <div
-  //       className="slds-m-top_small"
   //       css={css`
-  //         max-width: calc(33em * 3);
-  //         margin-left: auto;
-  //         margin-right: auto;
+  //         display: grid;
+  //         gap: 1em;
+  //         grid-template-columns: repeat(auto-fit, minmax(5em, 30em));
+  //         justify-content: center;
   //       `}
   //     >
-  //       <div
-  //         css={css`ç
-  //             display: grid;
-  //             gap: 1em;
-  //             grid-template-columns: repeat(auto-fit, minmax(5em, 30em));
-  //             justify-content: center;
+
+  //       {HOME_ITEMS?.map((card) => (
+  //         <div
+  //           key={card.title}
+  //           className="slds-box slds-box_x-small"
+  //           css={css`
+  //             background-color: #235789;
   //           `}
-  //       >
-  //         {HOME_ITEMS?.map((card) => (
-  //           <div
-  //             key={card.title}
-  //             className="slds-box slds-box_x-small"
-  //             css={css`
-  //               background-color: #235789;
-  //             `}
-  //           >
-  //             <p>{card.title}</p>
-  //           </div>
-  //         ))}
-  //       </div>
+  //         >
+  //           <p>{card.title}</p>
+  //         </div>
+  //       ))}
   //     </div>
-  //   );
+  //   </div>
+  // );
 
   //   const titleStyle = css({
   //     boxSizing: 'border-box',
