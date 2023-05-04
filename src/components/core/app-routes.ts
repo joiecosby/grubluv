@@ -31,3 +31,7 @@ export const APP_ROUTES: RouteMap = {
     DESCRIPTION: 'Discover new recipes',
   },
 } as const;
+
+/**
+ * TODO: TEST
+ */
