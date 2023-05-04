@@ -179,3 +179,8 @@ const Tabs: React.FC<Props> = ({ children }) => {
 };
 
 export default Tabs;
+
+//https://www.geeksforgeeks.org/create-a-responsive-navbar-using-reactjs/
+/**
+ * Instead of creating a navigation bar, use route/routes
+ */
