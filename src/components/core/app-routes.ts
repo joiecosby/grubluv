@@ -32,6 +32,3 @@ export const APP_ROUTES: RouteMap = {
   },
 } as const;
 
-/**
- * TODO: TEST
- */
