@@ -126,55 +126,6 @@ const Tabs: React.FC<Props> = ({ children }) => {
         {children[selectedTab]}
       </div>
     </WrapperDiv>
-
-    // <WrapperDiv>
-    //   <h2>Resize this frame to see the truncating effect. {'\u2728'}</h2>
-
-    //   {/* <div className={GreedyListWrapper} id="GreedyList"> */}
-    //   <div>
-    //     <TrunkList>
-    //       <TrunkListLi>
-    //         <TrunkListItem href="#">A link</TrunkListItem>
-    //       </TrunkListLi>
-
-    //       <TrunkListLi>
-    //         <TrunkListItem href="#">Somewhere</TrunkListItem>
-    //       </TrunkListLi>
-
-    //       <TrunkListLi>
-    //         <TrunkListItem href="#">A bit longer</TrunkListItem>
-    //       </TrunkListLi>
-
-    //       <TrunkListLi>
-    //         <TrunkListItem href="#">Another one</TrunkListItem>
-    //       </TrunkListLi>
-
-    //       <TrunkListLi>
-    //         <TrunkListItem href="#">Yet another</TrunkListItem>
-    //       </TrunkListLi>
-
-    //       <TrunkListLi>
-    //         <TrunkListItem href="#">Again</TrunkListItem>
-    //       </TrunkListLi>
-
-    //       <TrunkListLi>
-    //         <TrunkListItem href="#">Last One</TrunkListItem>
-    //       </TrunkListLi>
-
-    //       {/* <ListControls className={controlOpen}>
-    //         <TrunkListItem href="#GreedyList">
-    //           <span>more</span>
-    //         </TrunkListItem>
-    //       </ListControls>
-
-    //       <ListControls className={controlClose}>
-    //         <TrunkListItem href="#">
-    //           <span>less</span>
-    //         </TrunkListItem>
-    //       </ListControls> */}
-    //     </TrunkList>
-    //   </div>
-    // </WrapperDiv>
   );
 };
 
